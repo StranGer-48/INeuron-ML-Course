@@ -50,7 +50,7 @@ Supervised ML algorithms can apply what has been learned in the past to new data
 Unsupervised learning is a type of machine learning that looks for previously undetected patterns in a data set with no pre-existing labels and with a minimum of human supervision. Cluster analysis is used i unsupervised learning to group, or segment, datasets with shared attributes in order to extrapolate algorithmic relationships. Cluster analysis is a branch of machine learning that groups the data that has not been labeled, classified or categorized. 
 
 **Approaches:**
- * Hierarrrrrrrrrrrrrrrrrrrrrchical clustering
+ * Hierarchical clustering
  * K-means
  * DBSCAN
  * K-nearest neighbor clustering 
