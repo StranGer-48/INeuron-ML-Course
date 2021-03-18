@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Search</h1>
+
+    <div class="form">
+        <form action="/reviews" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <div>
+        <h2 class="text-center"> Available Databases</h2>
+
+        <table>
+            <tr>
+                {% for database in databases %}
+                <th>{{ database }}</th>
+                {% endfor %}
+            </tr>
+            <tbody>
+                {% for count in counts %}
+                <td>{{ count }}</td>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+

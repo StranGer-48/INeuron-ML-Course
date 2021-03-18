@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Review Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+
+  <div class="fluid-container">
+   <div class="header">Reviews </div>
+   <table cellspacing="0">
+      <tr>
+         <th>Product Details</th>
+          <th>Discount</th>
+          <th>Description</th>
+          <th>Available Offers</th>
+          <th>Highlights</th>
+          <th>Payment Options</th>
+      </tr>
+         {% for review in reviews %}
+      <tr>
+          <td>
+              <ul>
+                  <li><p><b>Name: {{review['Product Name']}}</b></p></li>
+                  <li><p>Rating:{{review['Product Rating']}}</p></li>
+                  <li><p>Price:{{review['Product Price']}}</p></li>
+              </ul>
+          </td>
+         <td>{{review['Discount']}} </td>
+          <td>{{review['Description']}}</td>
+          <td>{{review['Available Offers']}}</td>
+          <td>{{review['Highlights']}}</td>
+          <td>{{review['Payment Options']}}</td>
+       {% endfor %}
+   </table>
+</div>
+
+
+
+</body>
+
+</html>
